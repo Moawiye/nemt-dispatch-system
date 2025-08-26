@@ -82,13 +82,15 @@ public class TripView extends VerticalLayout {
         actionButtons.setJustifyContentMode(JustifyContentMode.CENTER);
 
         Button newTripButton = new Button("🎫 New Trip", e -> openTripDialog(new Trip()));
-        newTripButton.addClassName("btn btn-primary");
+        newTripButton.addClassName("btn");
+        newTripButton.addClassName("btn-primary");
         newTripButton.getStyle()
                 .set("font-size", "1rem")
                 .set("padding", "var(--space-3) var(--space-6)");
 
         Button refreshButton = new Button("🔄 Refresh", e -> refreshGrid());
-        refreshButton.addClassName("btn btn-secondary");
+        refreshButton.addClassName("btn");
+        refreshButton.addClassName("btn-secondary");
         refreshButton.getStyle()
                 .set("font-size", "1rem")
                 .set("padding", "var(--space-3) var(--space-6)");
@@ -229,7 +231,8 @@ public class TripView extends VerticalLayout {
             actions.setSpacing(true);
 
             Button editButton = new Button("✏️", e -> openTripDialog(trip));
-            editButton.addClassName("btn btn-ghost");
+            editButton.addClassName("btn");
+            editButton.addClassName("btn-ghost");
             editButton.getStyle()
                     .set("padding", "var(--space-2)")
                     .set("min-width", "auto")
@@ -243,7 +246,8 @@ public class TripView extends VerticalLayout {
                     showNotification("Cannot cancel this trip", NotificationVariant.LUMO_ERROR);
                 }
             });
-            cancelButton.addClassName("btn btn-ghost");
+            cancelButton.addClassName("btn");
+            cancelButton.addClassName("btn-ghost");
             cancelButton.getStyle()
                     .set("padding", "var(--space-2)")
                     .set("min-width", "auto")
@@ -331,10 +335,12 @@ public class TripView extends VerticalLayout {
             refreshGrid();
             dialog.close();
         });
-        saveButton.addClassName("btn btn-primary");
+        saveButton.addClassName("btn");
+        saveButton.addClassName("btn-primary");
 
         Button cancelButton = new Button("❌ Cancel", e -> dialog.close());
-        cancelButton.addClassName("btn btn-secondary");
+        cancelButton.addClassName("btn");
+        cancelButton.addClassName("btn-secondary");
 
         footer.add(cancelButton, saveButton);
 

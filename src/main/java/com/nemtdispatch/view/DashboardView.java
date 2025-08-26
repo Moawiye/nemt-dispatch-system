@@ -80,7 +80,8 @@ public class DashboardView extends VerticalLayout {
                 .set("z-index", "10");
 
         Div statsGrid = new Div();
-        statsGrid.addClassName("grid grid-cols-5");
+        statsGrid.addClassName("grid");
+        statsGrid.addClassName("grid-cols-5");
         statsGrid.getStyle()
                 .set("gap", "var(--space-6)");
 
@@ -145,7 +146,8 @@ public class DashboardView extends VerticalLayout {
                 .set("text-align", "center");
 
         Div actionsGrid = new Div();
-        actionsGrid.addClassName("grid grid-cols-2");
+        actionsGrid.addClassName("grid");
+        actionsGrid.addClassName("grid-cols-2");
         actionsGrid.getStyle()
                 .set("gap", "var(--space-6)")
                 .set("max-width", "800px")
