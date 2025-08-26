@@ -1,0 +1,136 @@
+# 🚐 NEMT Dispatch System
+
+A comprehensive Non-Emergency Medical Transportation dispatch system built with Spring Boot and Vaadin.
+
+## 🌟 Features
+
+- **Trip Management**: Create, schedule, and track transportation requests
+- **Fleet Management**: Manage drivers and vehicles
+- **Smart Dispatch**: Automatic trip optimization and assignment
+- **Real-time Dashboard**: Live status monitoring
+- **Beautiful UI**: Modern, responsive Vaadin interface
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Java 17 or higher
+- Maven 3.6+
+- VS Code with Java Extension Pack
+
+### Installation
+
+1. **Extract the project** from the downloaded ZIP file
+2. **Open in VS Code**: File → Open Folder → Select project folder
+3. **Run the application**:
+   ```bash
+   mvn spring-boot:run
+   ```
+4. **Open browser**: http://localhost:8080
+
+### Sample Data
+The system comes pre-loaded with sample data:
+- 3 Drivers (John Smith, Sarah Johnson, Mike Wilson)
+- 3 Vehicles (Ford Transit, Chevrolet Express, etc.)
+- 4 Sample trips ready for dispatch
+
+## 📱 How to Use
+
+### 1. Dashboard
+- View system overview and statistics
+- Quick access to all features
+
+### 2. Trip Management
+- Click "New Trip" to create transportation requests
+- Fill in customer details, pickup/dropoff addresses
+- Set scheduled time and billing information
+
+### 3. Driver Management
+- Add new drivers with license information
+- View driver status and availability
+
+### 4. Vehicle Management
+- Register vehicles with capacity and accessibility info
+- Track vehicle status and assignments
+
+### 5. Dispatch Center
+- Click "Run Optimization" to automatically assign trips
+- View dispatch status and results
+- Monitor trip progress
+
+## 🛠️ Development
+
+### Project Structure
+```
+src/main/java/com/nemtdispatch/
+├── NemtDispatchApplication.java  # Main application
+├── entity/                       # Data models
+│   ├── Trip.java
+│   ├── Driver.java
+│   └── Vehicle.java
+├── service/                      # Business logic
+│   ├── TripService.java
+│   ├── FleetService.java
+│   └── DispatchService.java
+├── view/                         # UI components
+│   ├── MainLayout.java
+│   ├── DashboardView.java
+│   ├── TripView.java
+│   ├── DriverView.java
+│   ├── VehicleView.java
+│   └── DispatchView.java
+└── config/                       # Configuration
+    └── SampleDataLoader.java
+```
+
+### Adding Features
+1. Create new entities in `entity/` package
+2. Add business logic in `service/` package
+3. Create UI views in `view/` package
+4. Update navigation in `MainLayout.java`
+
+## 🌐 Deployment
+
+### Local Development
+```bash
+mvn spring-boot:run
+```
+
+### Production Build
+```bash
+mvn clean package -Pproduction
+java -jar target/nemt-dispatch-system-1.0.0.jar
+```
+
+### Deploy to Cloud
+The JAR file can be deployed to:
+- Heroku
+- Railway
+- Render
+- Any cloud platform supporting Java applications
+
+## 📊 System Workflow
+
+1. **Create Trip**: Customer books transportation
+2. **Add Resources**: Ensure drivers and vehicles are available
+3. **Run Dispatch**: System optimizes and assigns trips
+4. **Track Progress**: Monitor trip status in real-time
+5. **Complete Trip**: Driver updates status via interface
+
+## 🎯 Next Steps
+
+- Add real GPS tracking
+- Integrate SMS/Email notifications
+- Add payment processing
+- Create mobile driver app
+- Add advanced reporting features
+
+## 🤝 Support
+
+For issues or questions:
+1. Check the console output for error messages
+2. Verify Java 17+ is installed
+3. Ensure port 8080 is available
+4. Try `mvn clean install` if build fails
+
+---
+Built with ❤️ using Spring Boot + Vaadin
